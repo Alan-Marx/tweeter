@@ -1,12 +1,21 @@
 "use strict";
 
+// Chance is a minimalist generator of random strings, numbers, etc.
+// the 'chance' variable is a chance object with a host of methods to produce 
+// different random data.
+
 const Chance      = require("chance"),
       chance      = new Chance();
 
+// md5 will provide a function for hashing messages.
+
 const md5 = require('md5');
 
-
 module.exports = {
+
+  // The following function will return a a 'user' object which is itself an object 
+  // consisting of 'name', 'avatars' and 'handle' key value pairs;
+
   generateRandomUser: () => {
     const gender    = chance.gender();
     const firstName = chance.first({gender: gender});

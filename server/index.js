@@ -18,6 +18,8 @@ const db = require("./lib/in-memory-db");
 // actual database it uses and see little to no changes elsewhere in the code
 // (hint hint).
 //
+//
+// DataHelpers will return an object with the saveTweet and getTweet methods.
 // Because it exports a function that expects the `db` as a parameter, we can
 // require it and pass the `db` parameter immediately:
 const DataHelpers = require("./lib/data-helpers.js")(db);
@@ -26,6 +28,7 @@ const DataHelpers = require("./lib/data-helpers.js")(db);
 // so it can define routes that use it to interact with the data layer.
 const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
+// Any http request to the /tweets path will call the tweetsRoutes function.
 // Mount the tweets routes at the "/tweets" path prefix:
 app.use("/tweets", tweetsRoutes);
 
