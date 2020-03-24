@@ -4,11 +4,12 @@
 
 header {
   height: 400px;
-  width: inherit;  
   position: relative;
   top: 120px;
+  right: 0;
+  left: 0;
   text-align: center;
-  background-image: url(/images/diagmonds--dark--1920x1080.png);
+  background-image: url(/images/batthern-1920x1080.png);
   background-color: #ad6d7a;
   color: white;
 }
@@ -16,4 +17,4 @@ header {
 .centered {
   display: inline-block;
 }
-
+  

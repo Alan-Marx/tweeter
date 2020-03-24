@@ -26,6 +26,9 @@ body {
  */
 
  main {
+   position: relative;
+   top: 120px;
+   /* text-align: center; */
    width: 90%;
-   text-align: center;
+   margin: 0 auto;
  }
