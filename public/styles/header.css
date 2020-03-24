@@ -7,21 +7,13 @@ header {
   width: inherit;  
   position: relative;
   top: 120px;
+  text-align: center;
   background-image: url(/images/diagmonds--dark--1920x1080.png);
   background-color: #ad6d7a;
+  color: white;
 }
 
 .centered {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  display: inline-block;
 }
 
-.avatar {
-  top: 0px;
-}
-
-.username {
-  top: 270px;
-  color: white;
-}
