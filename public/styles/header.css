@@ -1,0 +1,27 @@
+/*
+* Header with user avatar and name 
+*/
+
+header {
+  height: 400px;
+  width: inherit;  
+  position: relative;
+  top: 120px;
+  background-image: url(/images/diagmonds--dark--1920x1080.png);
+  background-color: #ad6d7a;
+}
+
+.centered {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.avatar {
+  top: 0px;
+}
+
+.username {
+  top: 270px;
+  color: white;
+}
