@@ -1,18 +1,15 @@
 
-#tweet-container {
-  clear: both;
-}
+
 
 #tweet-container output {
   width: 95%;
   margin: auto;
-  clear: both;
   display: block;
   border: none;
   border-bottom: 3px solid black;
   font-size: 30px;
   font-weight: bold;
-  padding: 25px 40px;
+  padding: 25px 0.5% 35px 0.5%
 
 }
 
@@ -42,10 +39,15 @@ article:hover .handle {
 .username {
   float: left;
   font-weight: lighter;
+  display: flex;
 }
 
+.name {
+  margin: auto 0;
+  padding: 0 10px;
+}
 .top {
-  padding: 25px 40px;
+  padding: 25px 3% 25px 3%;
   font-size: 35px;
 }
 
@@ -55,10 +57,16 @@ article:hover .handle {
 
 .icons {
   float: right;
+  display: flex;
+  flex-direction: row;
+ }
+
+ .fas {
+   padding: 0 10px;
  }
 
 .bottom {
-  padding: 25px 40px;
+  padding: 20px 3% 40px 3%;
   font-size: 25px;
 }
 
