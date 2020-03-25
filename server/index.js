@@ -26,6 +26,8 @@ const DataHelpers = require("./lib/data-helpers.js")(db);
 
 // The `tweets-routes` module works similarly: we pass it the `DataHelpers` object
 // so it can define routes that use it to interact with the data layer.
+// The tweetsRoutes variable will consist of a function containing get and post route handlers 
+// for the home page "/", along with the DataHelpers object of methods.
 const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
 // Any http request to the /tweets path will call the tweetsRoutes function.

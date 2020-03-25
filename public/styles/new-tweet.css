@@ -1,0 +1,39 @@
+
+form {
+  width: 100%;
+  padding-top: 40px;
+}
+
+label {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  background: inherit;
+  border: none;
+  border-bottom: 3px solid black;
+  resize: none;
+  font-size: 30px;
+  padding-top: 17px;
+  height: 80px;
+}
+
+.counter {
+  font-family: 'Bungee', sans-serif;
+  float: right;
+  padding: 10px;
+}
+
+
+button {
+  background:#4056A1;
+  color: #ffffff;
+  font-family: 'Bungee', sans-serif;
+  padding: 13px 10px 10px 10px;
+  text-align: left;
+  float: left;
+}
+
