@@ -1,0 +1,64 @@
+
+#tweet-container {
+  clear: both;
+}
+
+#tweet-container output {
+  width: 95%;
+  margin: auto;
+  clear: both;
+  display: block;
+  border: none;
+  border-bottom: 3px solid black;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 25px 40px;
+
+}
+
+article {
+  border: 3px solid black;
+  overflow: auto;
+  margin-bottom: 40px;
+  opacity: 60%;
+  font-weight: bold;
+}
+
+article:hover {
+  box-shadow: 10px 10px;
+  opacity: 100%;
+}
+
+article:hover .handle {
+  display: block;
+}
+
+.handle {
+  float: right;
+  opacity: 50%;
+  display: none;
+}
+
+.username {
+  float: left;
+  font-weight: lighter;
+}
+
+.top {
+  padding: 25px 40px;
+  font-size: 35px;
+}
+
+.date-created {
+  float: left;
+}
+
+.icons {
+  float: right;
+ }
+
+.bottom {
+  padding: 25px 40px;
+  font-size: 25px;
+}
+

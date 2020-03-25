@@ -1,4 +1,8 @@
 
+.new-tweet {
+  margin-bottom: 100px;
+}
+
 form {
   width: 100%;
   padding-top: 40px;

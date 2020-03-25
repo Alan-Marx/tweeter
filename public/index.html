@@ -21,11 +21,12 @@
 
     <!-- Form CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+   
+    <!-- Tweets CSS -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    
   </head>
 
   <body>
@@ -34,7 +35,7 @@
       <span>tweeter</span>
     </nav>
     <!-- Header with name and avatar of user -->
-    <header>
+    <header class="site-header">
       <div class="centered">
         <img src="/images/profile-hex.png">
       </div>
@@ -53,10 +54,19 @@
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </form>
-      </section id="tweet-container"> 
-      
-      <section>
-
+      </section> 
+      <section id="tweet-container">
+        <article>
+          <header>
+            <div class="username top">[IMAGE] Rhoda Jacobs</div>
+            <div class="handle top"> @Mrs.Jacobs</div>
+          </header>
+          <output>Hello World!</output>
+          <footer>
+            <div class="date-created bottom">10 days ago</div>
+            <div class="icons bottom">Icons</div>
+          </footer>
+        </article>
       </section>
     </main>
     <!-- App JS -->

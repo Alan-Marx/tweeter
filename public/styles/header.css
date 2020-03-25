@@ -2,7 +2,7 @@
 * Header with user avatar and name 
 */
 
-header {
+header.site-header {
   height: 400px;
   position: relative;
   top: 120px;
