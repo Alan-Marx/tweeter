@@ -25,7 +25,7 @@ article {
 }
 
 article:hover {
-  box-shadow: 10px 10px;
+  box-shadow: 10px 10px rgb(5, 163, 216);
   opacity: 100%;
 }
 
