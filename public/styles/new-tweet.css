@@ -21,6 +21,10 @@ textarea {
   height: 80px;
 }
 
+.over-limit {
+  color: red;
+}
+
 .counter {
   font-family: 'Bungee', sans-serif;
   float: right;
