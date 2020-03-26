@@ -12,6 +12,16 @@
 
 $(function() {
 
+  $("form").submit(function(event) {
+    event.preventDefault();
+    let formData = $(this).serialize();
+    $.post('/tweets/', formData, function (data, status) {
+      console.log(`Data: ${data}. Status: ${status}`);
+    })
+  })
+
+
+
   const data = [
     {
       "user": {
@@ -31,7 +41,7 @@ $(function() {
         "avatars": "https://i.imgur.com/nlhLi3I.png",
         "handle": "@rd" },
       "content": {
-        "text": "Je pense , donc je suis"
+        "text": "Je pense, donc je suis"
       },
       "created_at": 1461113959088
     }
@@ -68,6 +78,10 @@ $(function() {
   };
   
   renderTweets(data);
+
+
+
+
 
 });
  
