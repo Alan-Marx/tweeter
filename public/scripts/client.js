@@ -46,6 +46,12 @@ $(function() {
     }
   };
   
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   const createTweetElement = (tweetObject) => {
     const markup = `
     <header> 
@@ -55,7 +61,7 @@ $(function() {
       </div>
       <div class="handle top">${tweetObject.user.handle}</div>
     </header>
-    <output>${tweetObject.content.text}</output>
+    <output>${escape(tweetObject.content.text)}</output>
     <footer>
       <div class="date-created bottom">${(Math.floor((Date.now() - tweetObject.created_at) / 1000 / 60 / 60 / 24))} days ago</div>
       <div class="icons bottom">
