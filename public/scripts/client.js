@@ -32,6 +32,7 @@ $(function() {
       $.post('/tweets/', formData, function (data, status) {
         console.log(`Data: ${data}. Status: ${status}`);  
         $('[name="text"]').val('');
+        $('[name="counter').val(140);
         $.get("/tweets/", function(data) {
           let newTweet = data[data.length - 1];
           renderTweets(newTweet);
