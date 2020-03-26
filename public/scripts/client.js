@@ -4,23 +4,29 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
- // createTweetElement will take in a tweet object and return an
- // article element containing the entire HTML structure of the tweet
-
- // Recall that you can use jQuery to construct new elements using 
- // the $ function, like so: const $tweet = $("<article>").addClass("tweet");
-
 $(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
+    $(".errors").slideUp(200);
+
     let tweetValue = this.querySelector('[name="text"]').value;
+    let errorTriangles = '<i class="fas fa-exclamation-triangle">';
+
+    // the setTimeouts ensure that the warning has time to slide up when a user moves from one error message to another. Without these,
+    // the new warning message will be appended before the warning has slid up and then comes down again, which I believe makes the UI look
+    // rather clumsy
+    
     if (!tweetValue) {
-      alert('Your tweet is empty!');
-      return;
+      setTimeout(() => {
+        $(".errors").empty().append(`${errorTriangles} Your tweet is empty!${errorTriangles}`).slideDown(300);
+          return;
+      }, 300);
     } else if (tweetValue.length > 140) {
-      alert('Your tweet is over 140 characters!');
-      return;
+      setTimeout(() => {
+        $(".errors").empty().append(`${errorTriangles} Your tweet is over 140 characters!${errorTriangles}`).slideDown(300);
+        return;
+      }, 300);
     } else {
       let formData = $(this).serialize();
       $.post('/tweets/', formData, function (data, status) {

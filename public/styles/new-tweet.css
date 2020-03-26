@@ -8,6 +8,17 @@ form {
   padding-top: 40px;
 }
 
+.errors {
+  border: 3px solid red;
+  text-align: center;
+  padding: 2%;
+  margin-bottom: 2%;
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  display: none;
+}
+
 label {
   font-size: 30px;
   font-weight: 700;
