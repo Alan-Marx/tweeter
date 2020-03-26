@@ -40,10 +40,10 @@ article:hover .handle {
   float: left;
   font-weight: lighter;
   display: flex;
+  align-items: center;
 }
 
 .name {
-  margin: auto 0;
   padding: 0 10px;
 }
 .top {

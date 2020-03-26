@@ -24,15 +24,25 @@ $(function() {
     } else {
       let formData = $(this).serialize();
       $.post('/tweets/', formData, function (data, status) {
-        console.log(`Data: ${data}. Status: ${status}`);
+        console.log(`Data: ${data}. Status: ${status}`);  
+        $('[name="text"]').val('');
+        $.get("/tweets/", function(data) {
+          let newTweet = data[data.length - 1];
+          renderTweets(newTweet);
+        })
       })
     } 
   })
 
   const renderTweets = (tweetDatabase) => {
-    for (const tweet of tweetDatabase) {
-      const $tweet = createTweetElement(tweet);
-      $('#tweet-container').prepend($tweet);
+    if (Array.isArray(tweetDatabase)) {
+      for (const tweet of tweetDatabase) {
+        const $tweet = createTweetElement(tweet);
+        $('#tweet-container').prepend($tweet);
+      }
+    } else {
+      const $tweet = createTweetElement(tweetDatabase);
+        $('#tweet-container').prepend($tweet);
     }
   };
   
