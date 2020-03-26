@@ -14,10 +14,19 @@ $(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
-    let formData = $(this).serialize();
-    $.post('/tweets/', formData, function (data, status) {
-      console.log(`Data: ${data}. Status: ${status}`);
-    })
+    let tweetValue = this.querySelector('[name="text"]').value;
+    if (!tweetValue) {
+      alert('Your tweet is empty!');
+      return;
+    } else if (tweetValue.length > 140) {
+      alert('Your tweet is over 140 characters!');
+      return;
+    } else {
+      let formData = $(this).serialize();
+      $.post('/tweets/', formData, function (data, status) {
+        console.log(`Data: ${data}. Status: ${status}`);
+      })
+    } 
   })
 
   const renderTweets = (tweetDatabase) => {
