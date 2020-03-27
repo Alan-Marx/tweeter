@@ -9,11 +9,15 @@ nav {
   right: 0;
   position: fixed;
   z-index: 999;
-  padding: 1.5em;
-  background:#4056A1;
+  padding: 1.5%;
+  background-image: url(/images/wall--4-light-1920x1080.png);
   color: #ffffff;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 nav span {
   font-family: 'Bungee', sans-serif;
+  margin: auto;
  }
