@@ -6,6 +6,9 @@
 
 $(function() {
 
+  // The following event handler takes a new valid tweet submission, makes an ajax Post request to the server which creates a new tweet
+  // object and then sends an ajax Get request in order to render the new tweet at the top of the tweet list on the site
+  
   $("form").submit(function(event) {
     event.preventDefault();
     $(".errors").slideUp(200);
@@ -41,6 +44,9 @@ $(function() {
     } 
   })
 
+  // The following function takes in an array of tweet objects or a single tweet object and creates an article element for each tweet which
+  // it then proceeds to add to the main index.html. The newest tweets will appear above the others.
+
   const renderTweets = (tweetDatabase) => {
     if (Array.isArray(tweetDatabase)) {
       for (const tweet of tweetDatabase) {
@@ -53,6 +59,8 @@ $(function() {
     }
   };
   
+  // used to prevent XSS attacks
+
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -82,6 +90,8 @@ $(function() {
     return $tweet;
   };
   
+  // This function and its call will render all the tweets saved in the database when the app is loaded for the first time
+
   const loadTweets = () => {
     $.get("/tweets/", function(data) {
       renderTweets(data);
